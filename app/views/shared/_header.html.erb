@@ -18,6 +18,9 @@
      </p>
     </li>
 
+    
+
+    <% if user_signed_in? %>
      <li class='icon'>
      <%= link_to image_tag("houses.jpg", class:"google-btn"), user_path(current_user.id) %>
      <p class='icon-text'>
@@ -31,8 +34,6 @@
       <%=link_to "全てのitem", "#", class: "user-nickname" %>
      </p>
     </li>
-
-    <% if user_signed_in? %>
 
    <li class='icon'>
      <%= link_to image_tag("user.jpg", class:"google-btn"), new_box_path %>

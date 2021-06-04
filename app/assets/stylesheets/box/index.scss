@@ -1,0 +1,60 @@
+.icon{
+  padding: 30px;  
+  color: #FF8C00;
+  margin: 0%;
+}
+
+.icon-text{
+  margin: 0%;
+}
+
+.user-nickname {
+  text-decoration: none;
+  color: #FF8C00;
+  display:table;
+  text-align:center;
+  margin: auto;
+  font-family: Comic Sans MS;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  background: #faA460;
+}
+
+.item-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.item-img-content {
+  position: relative;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+
+.item-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.item-name {
+  font-size: 20px;
+  text-decoration: none;
+  text-align:center;
+  margin: auto;
+  color: black;
+}
+

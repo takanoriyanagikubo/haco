@@ -1,0 +1,27 @@
+<%= render "shared/header" %>
+
+<div class='all-box-text'>
+全ての部屋
+</div>
+
+<div class='all-box' >
+  <% @box.each do |box| %>
+
+    <li class='list'> 
+      <%= link_to box_path(box.id) do %>
+      
+        <div class='item-img-content' >
+          <%= image_tag (box.image), class: "item-img" %>
+        </div>
+
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= box.box_name %>
+          </h3>
+        </div>
+
+      <% end %>
+    </li>
+    
+  <% end %>
+</div>

@@ -1,0 +1,17 @@
+
+<%= render "shared/header" %>
+
+  <% @box.each do |box| %>
+    <li class='list'> 
+      <%= link_to box_path(box.id) do %>
+        <div class='item-img-content' >
+          <%= image_tag (box.image), class: "item-img" %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= box.box_name %>
+          </h3>
+        </div>
+      <% end %>
+    </li>
+  <% end %>

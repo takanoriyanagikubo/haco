@@ -1,0 +1,47 @@
+<%= render "shared/header" %>
+
+<div class="">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @box.box_name %>
+    </h2>
+
+    <div class="item-img-content">
+      <%= image_tag (@box.image) ,class:"item-box-img" %>
+    </div>
+    <h2 class="name">
+      <%= @box.box_memo %>
+    </h2>
+    <ul class='lists-icon'>
+
+
+    <li class='icon'>
+     <%= link_to image_tag("edit.jpg", class:"google-btn"), edit_box_path %>
+    <p class='icon-text'>
+    <%=link_to "編集", "#", class: "user-nickname" %>
+    </p>
+    </li>
+
+      <li class='icon'>
+     <%= link_to image_tag("delete.jpg", class:"google-btn"), box_path(@box), method: :delete %>
+    <p class='icon-text'>
+    <%=link_to "削除", "#", class: "user-nickname" %>
+    </p>
+    </li>
+
+     <li class='icon'>
+     <%= link_to image_tag("put.jpg", class:"google-btn"), new_box_item_path(@box.id) %>
+    <p class='icon-text'>
+    <%=link_to "収納", "#", class: "user-nickname" %>
+    </p>
+    </li>
+
+     <li class='icon'>
+     <%= link_to image_tag("see.jpg", class:"google-btn"), box_item_path(@box.id) %>
+    <p class='icon-text'>
+    <%=link_to "見る", "#", class: "user-nickname" %>
+    </p>
+    </li>
+</div>
+
+<%#= render "shared/footer" %>

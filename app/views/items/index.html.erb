@@ -1,0 +1,33 @@
+<% @box.each do |box| %>
+      <li class='list'> 
+      <%= link_to box_path(box.id) do %>
+        <div class='item-img-content' >
+          <%= image_tag (box.image), class: "item-img" %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= box.box_name %>
+          </h3>
+        </div>
+        <% end %>
+      </li>
+  <% end %>
+
+<div class='all-item' >
+  <% @item.each do |item| %>
+    <li class='list'>
+      <%#= link_to box_path(item.id) do %>
+        <div class='item-img-content' >
+          <%= image_tag (item.image), class: "item-img" %>
+        </div>
+         <%= item.item_name %>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%#= link_to "編集", edit_box_item_path(@item_id), class: "item-red-btn" %>
+            <%#= link_to "削除", box_item_path(item.id), method: :delete, class:"item-destroy" %>
+          </h3>
+        </div>
+      <%# end %>
+    </li>
+  <% end %>
+</div>

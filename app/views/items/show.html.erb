@@ -1,0 +1,28 @@
+<%= render "shared/header" %>
+
+    <div class="box-item">
+      <%= @box.box_name%>の中身
+    </div>
+
+<div class='all-item' >
+  <% @item.each do |item| %>
+    <li class='list'>
+        <div class='item-img-content' >
+          <%= image_tag (item.image), class: "item-img" %>
+        </div>
+
+      <div class='item-name' >
+         <%= item.item_name %>
+      </div>
+
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%#= link_to "編集", edit_box_item_path(@box.id,item.id), class: "item-red-btn" %>
+            <%= link_to "削除", box_item_path(@box.id,item.id), method: :delete, class:"item-red-btn" %>
+          </h3>
+        </div>
+
+      <%# end %>
+    </li>
+  <% end %>
+</div>

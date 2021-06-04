@@ -1,0 +1,53 @@
+<div class="items-sell-contents">
+
+  <header class="items-sell-header">
+    
+  </header>
+
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">itemの情報を入力</h2>
+    <%= form_with model: @item, url:box_items_path,  local: true do |f| %>
+    
+    <%#= render 'shared/error_messages', model: f.object %>
+
+    <%# 画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        itemの画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# 画像 %>
+
+    <div class="new-items">
+      <div class="weight-bold-text">
+        itemの名前
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :item_name, class:"items-text", id:"item-name", placeholder:"物の名前（必須)", maxlength:"30" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          メモ
+        </div>
+        <%= f.text_area :item_memo, class:"items-text", id:"item-memo", placeholder:"メモ" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+  
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "boxに入れる" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  
+  <% end %>
+
+</div>

@@ -1,0 +1,17 @@
+.all-box {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.all-box-text{
+  color: black;
+  text-align:center;
+  padding: 50px;
+  font-family: Comic Sans MS;
+}
+
+.item-img{
+  margin: 15px;
+}

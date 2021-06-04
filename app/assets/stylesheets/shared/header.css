@@ -1,0 +1,29 @@
+.h1{
+  color: #FF8C00;
+  font-size: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:arial black;
+  margin: 0px;
+  padding: 0px;  
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists-icon {
+  display: flex;
+  min-width: 200px;
+  list-style: none;
+  padding-left: 0px;
+  
+}

@@ -1,0 +1,71 @@
+<%=link_to "hako。", boxes_path, class:"h1" %>
+
+  <div class='nav'>
+
+    <ul class='lists-icon'>
+
+    <li class='icon'>
+    <%= link_to image_tag("kate.png", class:"google-btn"), "#" %>
+    <p class='icon-text'>
+    <%=link_to "Search", "#", class: "user-nickname" %>
+    </p>
+    </li>
+
+    <li class='icon'>
+     <%= link_to image_tag("house.jpg", class:"google-btn"), new_box_path %>
+     <p class='icon-text'>
+      <%=link_to "boxを作る", "#", class: "user-nickname" %>
+     </p>
+    </li>
+
+     <li class='icon'>
+     <%= link_to image_tag("houses.jpg", class:"google-btn"), user_path(current_user.id) %>
+     <p class='icon-text'>
+      <%=link_to "全てのbox", "#", class: "user-nickname" %>
+     </p>
+    </li>
+
+    <li class='icon'>
+     <%= link_to image_tag("all-item.jpg", class:"google-btn"), users_path(current_user.id) %>
+     <p class='icon-text'>
+      <%=link_to "全てのitem", "#", class: "user-nickname" %>
+     </p>
+    </li>
+
+    <% if user_signed_in? %>
+
+   <li class='icon'>
+     <%= link_to image_tag("user.jpg", class:"google-btn"), new_box_path %>
+     <p class='icon-text'>
+     <%=link_to current_user.nick_name, "#", class: "user-nickname" %>
+     </p>
+    </li>
+
+    <li class='icon'>
+     <%= link_to image_tag("out.jpg", class:"google-btn"), destroy_user_session_path, method: :delete, class: "logout" %>
+    <p class='icon-text'>
+    <%=link_to "Logout", "#", class: "user-nickname" %>
+    </p>
+    </li>
+
+   <% else %>
+    <li class='icon'>
+     <%= link_to image_tag("in.jpg", class:"google-btn"), new_user_session_path %>
+    <p class='icon-text'>
+    <%=link_to "ログイン", "#", class: "user-nickname" %>
+    </p>
+    </li>
+
+    <li class='icon'>
+     <%= link_to image_tag("sinki.jpg", class:"google-btn"),new_user_registration_path, class: "sign-up" %>
+    <p class='icon-text'>
+    <%=link_to "新規登録", "#", class: "user-nickname" %>
+    </p>
+    </li>
+
+    <% end %> 
+
+    </ul>
+
+
+<ul class='item-lists'>

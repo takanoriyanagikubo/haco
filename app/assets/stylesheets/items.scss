@@ -1,0 +1,21 @@
+.all-item{
+  list-style: none;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
+  color: #FF8C00;
+  text-align:center;
+  margin: auto;
+  font-family: Comic Sans MS;
+}
+
+.box-item{
+  font-size: 35px;
+  text-decoration: none;
+  color: black;
+  display:table;
+  margin: auto;
+  font-family: Comic Sans MS;
+}

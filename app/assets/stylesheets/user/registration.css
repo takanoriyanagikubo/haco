@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .registration-main {
   width: 100%;
   min-width: 800px;

@@ -13,4 +13,13 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nick_name, :first_name, :last_name, :first_name_kana, :last_name_kana, :birthday])
   end
 
+
+  private
+
+  def basic_auth
+    authenticate_or_request_with_http_basic do |username, password|
+      username == 'taka' && password == '315'
+    end
+  end
+
 end

@@ -1,17 +1,25 @@
 
+<div class="box-item">
+全てのitem
+</div>
+
 <div class='all-item' >
+
   <% @item.each do |item| %>
+
     <li class='list'>
-      <%#= link_to box_path(item.id) do %>
-        <div class='item-img-content' >
-          <%= image_tag (item.image), class: "item-img" %>
-        </div>
-         <%= item.item_name %>
-        <div class='item-info'>
-          <h3 class='item-name'>
-          </h3>
-        </div>
-      <%# end %>
+
+        <%= link_to box_path(item.box.id) do %>
+          <div class='item-img-content' >
+            <%= image_tag (item.image), class: "items-img" %>
+          </div>
+          <div class='item-name' >
+            <%= item.item_name %>
+          </div>
+        <% end %>
+
     </li>
+
   <% end %>
+  
 </div>

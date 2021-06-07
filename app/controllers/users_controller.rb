@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def index
     @item = current_user.item
+    @box = current_user.box
   end
 
 end
